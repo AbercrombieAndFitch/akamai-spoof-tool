@@ -26,8 +26,6 @@ if [ "$1" != "-d" ]; then
 				PROD_DNS_ENTRY_WITH_PERIOD=${LINE_WITH_DNS_ENTRY/*canonical name = /}
 				PROD_DNS_ENTRY=${PROD_DNS_ENTRY_WITH_PERIOD/akamaiedge.net./akamaiedge.net}
 
-				echo "hi"
-
 				#create staging Akamai hostname
 				STAGING_DNS_ENTRY=${PROD_DNS_ENTRY/edge.net/edge-staging.net}
 			else
@@ -40,7 +38,6 @@ if [ "$1" != "-d" ]; then
 
 				#create staging Akamai hostname
 				STAGING_DNS_ENTRY=${PROD_DNS_ENTRY/key.net/key-staging.net}
-				echo "hello"
 			fi
 
 
